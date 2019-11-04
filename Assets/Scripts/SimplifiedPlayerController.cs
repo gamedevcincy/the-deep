@@ -28,7 +28,7 @@ public class SimplifiedPlayerController : MonoBehaviour
     {
         var col = GetComponent<BoxCollider>();
         float maxDistance = .1f;
-        var origin = new Vector3(col.bounds.center.x, col.bounds.min.y - .05f, col.bounds.center.z);
+        var origin = new Vector3(col.bounds.center.x, col.bounds.min.y + .05f, col.bounds.center.z);
         var result = Physics.Raycast(origin, Vector3.down, out RaycastHit hit, maxDistance);
         if(result)
             print(hit.collider.gameObject);
