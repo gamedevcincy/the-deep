@@ -26,8 +26,8 @@ public class SimplifiedPlayerController : MonoBehaviour
 
     bool IsGrounded()
     {
-        var col = GetComponent<BoxCollider>();
-        float maxDistance = .1f;
+        var col = GetComponent<CapsuleCollider>();
+        float maxDistance = .2f;
         var origin = new Vector3(col.bounds.center.x, col.bounds.min.y + .05f, col.bounds.center.z);
         var result = Physics.Raycast(origin, Vector3.down, out RaycastHit hit, maxDistance);
         if(result)

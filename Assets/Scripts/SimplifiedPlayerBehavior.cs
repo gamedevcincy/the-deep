@@ -10,7 +10,7 @@ public class SimplifiedPlayerBehavior : MonoBehaviour
     {
         var rb = GetComponent<Rigidbody>();
         rb.AddForce(accelerationSpeed * Vector2.right * magnitude);
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxMoveSpeed);
+        rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -maxMoveSpeed, maxMoveSpeed), rb.velocity.y, 0);
     }
 
     public void Jump()
