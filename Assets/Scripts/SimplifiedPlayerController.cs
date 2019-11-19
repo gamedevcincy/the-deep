@@ -6,6 +6,12 @@ public class SimplifiedPlayerController : MonoBehaviour
 {
 
     float joystickDeadzone = .1f;
+    public static GameObject player;
+
+    private void Start()
+    {
+        player = gameObject;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
