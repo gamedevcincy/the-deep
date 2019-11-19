@@ -9,11 +9,13 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
     public CharacterController controller;
+    public GameObject player;
 
     void Start()
     {
         // Store reference to attached component
         controller = GetComponent<CharacterController>();
+        player = gameObject;
     }
 
     void Update()
